@@ -1,6 +1,6 @@
-# [Thesis Title] — Analysis Code
+# MEP: Towards an Integrated Microfluidic Platform for the Encapsulation of Cytoskeletal Networks in Giant Unilamellar Vesicles — Analysis Code
 
-Code used for data analysis in my master's thesis, **"[Thesis Title]"** ([link to thesis / DOI, if available]).
+Code used for data analysis in my master's thesis, **"Towards an Integrated Microfluidic Platform for the Encapsulation of Cytoskeletal Networks in Giant Unilamellar Vesicles"**.
 
 ## About
 
@@ -18,20 +18,21 @@ diffusion analyses. Raw and processed data are **not included** in this reposito
 
 | Notebook | Description |
 |---|---|
-| `notebooks/calibration_analysis.ipynb` | Converts pressure to volumetric flow rate using fluorescent bead-tracking data (TrackMate/Fiji). Filters bead velocity distributions, compares technical repeats, and produces the final pressure–flow rate calibration curve. |
-| `notebooks/COMSOL_PFF_analysis.ipynb` | Analyzes COMSOL numerical simulation outputs of the PFF module: particle size distributions (KDE) per outlet, separation threshold *d★* vs. wash flow rate, and recovery/purity separation metrics. |
-| `notebooks/experimental_PFF_analysis.ipynb` | Analyzes experimental PFF device data, aggregated per device: filtering, KDE distributions per design/outlet, per-device *d★*, recovery/purity, and comparison with the COMSOL predictions. |
-| `notebooks/diffusion_analysis.ipynb` | Diffusion analysis of GUV, junction, and interfacial-area (IA) tile scan data. |
+| `notebooks/1_diffusion_analysis.ipynb` | Diffusion analysis of GUV, junction, and interfacial-area (IA) tile scan data. |
+| `notebooks/2_calibration_analysis.ipynb` | Converts pressure to volumetric flow rate using fluorescent bead-tracking data (TrackMate/Fiji). Filters bead velocity distributions, compares technical repeats, and produces the final pressure–flow rate calibration curve. |
+| `notebooks/3_COMSOL_PFF_analysis.ipynb` | Analyzes COMSOL numerical simulation outputs of the PFF module: particle size distributions (KDE) per outlet, separation threshold *d★* vs. wash flow rate, and recovery/purity separation metrics. |
+| `notebooks/4_experimental_PFF_analysis.ipynb` | Analyzes experimental PFF device data, aggregated per device: filtering, KDE distributions per design/outlet, per-device *d★*, recovery/purity, and comparison with the COMSOL predictions. |
+
 
 ## Expected data format
 
 Each notebook expects input data as CSV or Excel files (see the "Setup & data loading" section
 at the top of each notebook for the exact column names expected). Briefly:
 
+- **diffusion_analysis** — tile-scan `.csv` files per region (GUV, junction, IA).
 - **calibration_analysis** — TrackMate `.xlsx` export files, one per applied pressure/repeat.
 - **COMSOL_PFF_analysis** — COMSOL-exported `.csv` files with particle metrics per flow condition.
 - **experimental_PFF_analysis** — per-device/per-run `.csv` files of experimental particle diameters, plus the COMSOL threshold summary as a comparison input.
-- **diffusion_analysis** — tile-scan `.csv` files per region (GUV, junction, IA).
 
 ## Requirements
 
@@ -45,7 +46,7 @@ pip install -r requirements.txt
 
 If you use this code, please cite:
 
-> [Your Name], "[Thesis Title]", Master's thesis, [University], [Year].
+> Berta Valette Hohn, "Towards an Integrated Microfluidic Platform for the Encapsulation of Cytoskeletal Networks in Giant Unilamellar Vesicles", Master's thesis, Delft University of Technology, 2026.
 
 ## License
 
