@@ -6,7 +6,7 @@ Code used for data analysis in my master's thesis, **"Towards an Integrated Micr
 
 This repository contains the Jupyter notebooks used to analyze simulation and experimental data
 for a Pinched Flow Fractionation (PFF) microfluidic module, plus supporting calibration and
-diffusion analyses. Raw and processed data are **not included** in this repository.
+intensity profile analyses. Raw and processed data are **not included** in this repository.
 
 > **Note:** These notebooks were originally written and run in **Google Colab**, and load data
 > from a personal Google Drive folder (`from google.colab import drive`, paths under
@@ -18,10 +18,10 @@ diffusion analyses. Raw and processed data are **not included** in this reposito
 
 | Notebook | Description |
 |---|---|
-| `notebooks/1_diffusion_analysis.ipynb` | Diffusion analysis of GUV, junction, and interfacial-area (IA) tile scan data. |
-| `notebooks/2_calibration_analysis.ipynb` | Converts pressure to volumetric flow rate using fluorescent bead-tracking data (TrackMate/Fiji). Filters bead velocity distributions, compares technical repeats, and produces the final pressure–flow rate calibration curve. |
-| `notebooks/3_COMSOL_PFF_analysis.ipynb` | Analyzes COMSOL numerical simulation outputs of the PFF module: particle size distributions (KDE) per outlet, separation threshold *d★* vs. wash flow rate, and recovery/purity separation metrics. |
-| `notebooks/4_experimental_PFF_analysis.ipynb` | Analyzes experimental PFF device data, aggregated per device: filtering, KDE distributions per design/outlet, per-device *d★*, recovery/purity, and comparison with the COMSOL predictions. |
+| `1_diffusion_analysis.ipynb` | Intentisty profile analysis of the OLA production stream tile scan data. |
+| `2_calibration_analysis.ipynb` | Converts applied pressure to volumetric flow rate using fluorescent bead-tracking data (TrackMate/Fiji). Filters bead velocity distributions, compares technical repeats, and produces the final pressure–flow rate calibration curve. |
+| `3_COMSOL_PFF_analysis.ipynb` | Analyzes COMSOL numerical simulation outputs of the PFF module: particle size distributions (KDE) per outlet, separation threshold *d★* vs. wash flow rate, and recovery/purity separation metrics. |
+| `4_experimental_PFF_analysis.ipynb` | Analyzes experimental PFF device data, aggregated per device: filtering, KDE distributions per design/outlet, per-device *d★*, recovery/purity, and comparison with the COMSOL predictions. |
 
 
 ## Expected data format
